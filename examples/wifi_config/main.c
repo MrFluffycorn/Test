@@ -84,21 +84,6 @@ homekit_characteristic_t position_state_right = HOMEKIT_CHARACTERISTIC_(
         .setter=position_state_R_set
 );
 
-
-static void wifi_init() {
-    struct sdk_station_config wifi_config = {
-        .ssid = WIFI_SSID,
-        .password = WIFI_PASSWORD,
-    };
-
-    sdk_wifi_set_opmode(STATION_MODE);
-    sdk_wifi_station_set_config(&wifi_config);
-    sdk_wifi_station_connect();
-}
-
-
-
-
 //pins
 const int led_gpio = 2;
 const int left_blind_close = 13;
